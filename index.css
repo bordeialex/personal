@@ -86,11 +86,15 @@ nav a:hover {
   transform: rotate(-45deg) translateY(-8px);
 }
 
+
 main {
+  position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 50px 20px;
   flex: 1;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+              url('colloseum.jpg') center/cover no-repeat;
 }
 
 section {
@@ -186,3 +190,4 @@ footer {
     display: flex;
   }
 }
+
