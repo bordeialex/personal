@@ -1,77 +1,113 @@
-/* Resetting basic styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and flexbox layout */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #121212;
   color: #E0E0E0;
-  padding: 0;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Full-width header styling */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1C1C1C;
-  padding: 20px 5%;
+  padding: 15px 7%;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header .logo h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fff;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
+nav {
+  position: relative;
+}
+
 nav ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 nav a {
   color: #76C7C0;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #A0E7E5;
 }
 
-/* Content sections styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #76C7C0;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
 main {
-  max-width: 1000px; /* Increase max-width to allow space for image */
-  margin: 0 auto; /* Centering content */
-  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
   flex: 1;
 }
 
-/* General section styling */
 section {
   background-color: #1C1C1C;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
 }
 
-/* Header, paragraph, and link styles */
+section:hover {
+  transform: translateY(-3px);
+}
+
 section h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #fff;
   margin-bottom: 15px;
 }
@@ -83,47 +119,61 @@ section p {
 
 section a {
   color: #76C7C0;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
 }
 
 section a:hover {
   text-decoration: underline;
 }
 
-/* Footer styling */
-footer {
-  text-align: center;
-  margin-top: 60px;
-  color: #888;
-  font-size: 1rem;
-  margin-top: auto;
-}
-
-/* Layout container for About Me section */
 .section-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .text {
   flex: 1;
-  padding-right: 20px; /* Adds space between text and image */
 }
 
 .section-image {
-  width: 250px; /* Set the desired width of the image */
-  height: 250px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
-/* Contact section */
-#contact {
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #888;
+  font-size: 0.9rem;
   background-color: #1C1C1C;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1C1C1C;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
