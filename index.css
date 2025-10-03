@@ -94,7 +94,7 @@ main {
   padding: 50px 20px;
   flex: 1;
   background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-              url('colloseum.jpg') center/cover no-repeat;
+              url('colloseum.jpeg') center/cover no-repeat;
 }
 
 section {
@@ -190,4 +190,5 @@ footer {
     display: flex;
   }
 }
+
 
