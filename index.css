@@ -96,20 +96,25 @@ main {
 section {
   background-color: #1C1C1C;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 40px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease;
 }
 
-section:hover {
-  transform: translateY(-3px);
+section.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 section h2 {
   font-size: 1.8rem;
   color: #fff;
   margin-bottom: 15px;
+  border-left: 4px solid #76C7C0;
+  padding-left: 10px;
 }
 
 section p {
@@ -147,9 +152,13 @@ section a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
+.glow {
+  box-shadow: 0 0 15px #76C7C0;
+}
+
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   color: #888;
   font-size: 0.9rem;
   background-color: #1C1C1C;
