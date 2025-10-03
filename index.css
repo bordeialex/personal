@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
               url('colloseum.jpeg') center/cover no-repeat fixed;
   background-size: cover;
 }
@@ -102,7 +102,7 @@ main {
 }
 
 section {
-  background-color: rgba(28, 28, 28, 0.6);
+  background-color: rgba(28, 28, 28, 0.4);
   padding: 25px;
   border-radius: 12px;
   margin-bottom: 40px;
@@ -194,4 +194,5 @@ footer {
     display: flex;
   }
 }
+
 
