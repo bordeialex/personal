@@ -4,18 +4,12 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: #000;
-  overscroll-behavior: none;
-}
-
-body {
-  min-height: 100vh;
+html, body {
+  height: 100%;
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   color: #E0E0E0;
   line-height: 1.6;
-  background-color: #000;
 }
 
 .background {
@@ -193,10 +187,6 @@ footer {
     border-radius: 8px;
     display: none;
   }
-body {
-  display: block !important;
-  overflow-y: auto !important;
-}
 
   nav ul.active {
     display: flex;
@@ -206,4 +196,3 @@ body {
     display: flex;
   }
 }
-
