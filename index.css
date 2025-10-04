@@ -5,11 +5,11 @@
 }
 
 html, body {
-  height: 100%;
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   color: #E0E0E0;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 .background {
@@ -21,6 +21,13 @@ html, body {
   background: url('colloseum.jpeg') center/cover no-repeat fixed;
   z-index: -1;
   filter: brightness(0.3);
+}
+
+@media (max-width: 768px) {
+  .background {
+    background: #000;
+    filter: none;
+  }
 }
 
 header {
