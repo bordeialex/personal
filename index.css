@@ -10,6 +10,12 @@ html, body {
   font-family: 'Helvetica Neue', sans-serif;
   color: #E0E0E0;
   line-height: 1.6;
+  overscroll-behavior: none;
+}
+body {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
 }
 
 .background {
@@ -196,3 +202,4 @@ footer {
     display: flex;
   }
 }
+
