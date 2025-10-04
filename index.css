@@ -4,15 +4,17 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+html {
+  background-color: #000;
+  overscroll-behavior: none;
+}
+
+body {
+  min-height: 100vh;
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   color: #E0E0E0;
   line-height: 1.6;
-  overscroll-behavior: none;
-}
-html {
   background-color: #000;
 }
 
@@ -200,6 +202,3 @@ footer {
     display: flex;
   }
 }
-
-
-
