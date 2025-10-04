@@ -40,8 +40,9 @@ header {
   padding: 15px 7%;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
 }
 
@@ -110,6 +111,7 @@ main {
   margin: 0 auto;
   padding: 50px 20px;
   flex: 1;
+  padding-top: 80px;
 }
 
 section {
@@ -205,3 +207,4 @@ footer {
     display: flex;
   }
 }
+
